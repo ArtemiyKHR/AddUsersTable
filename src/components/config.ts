@@ -7,11 +7,16 @@ export const roles = {
     DEVELOPER: "Разработчик",
 }
 
-export const workBorders = {
-    1: "Белгатой",
-    2: "Шали",
-    3: "Урус-Мартан",
-};
+export const arrayOfObjects = [
+    {id: 1, name: "Белгатой"},
+    {id: 2, name: "Шали"},
+    {id: 3, name: "Урус-Мартан"}
+];
+
+export const workBorders = arrayOfObjects.reduce((acc, {id, name}) => {
+    acc[id] = name;
+    return acc;
+}, {} as { [key: number]: string });
 
 export const formSchema = z.object({
     name: z.string().min(3, "Минимальная длинна имени 3 символа!"),

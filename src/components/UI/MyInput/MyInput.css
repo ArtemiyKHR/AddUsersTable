@@ -1,0 +1,22 @@
+.form__input {
+    width: 350px;
+    border-radius: 10px;
+    border: 0.5px solid black;
+    padding: 10px;
+    margin: 5px 20px 10px 0;
+    background-color: rgba(255, 255, 255, 0.21);
+    color: black;
+    font-size: 18px;
+}
+
+
+.myInput {
+    display: flex;
+    flex-direction: column;
+}
+
+.myInput label {
+    font-family: "Jost", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+}

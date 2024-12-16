@@ -1,0 +1,54 @@
+.myBtn {
+    position: relative;
+    width: 155px;
+    margin: 0 15px;
+    line-height: 40px;
+    border-radius: 10px;
+    text-align: left;
+    padding-left: 40px;
+
+
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    cursor: pointer;
+
+    border: 2px solid black;
+    background-color: rgba(255, 255, 255, 0.25);
+    transition: 0.3s ease;
+}
+
+.myBtn:hover {
+    background-color: rgba(255, 106, 0, 0.69);
+    transform: scale(1.10);
+}
+
+.myBtn::before {
+    content: '';
+    position: absolute;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    top: 50%;
+    left: 8px;
+    transform: translateY(-50%);
+}
+
+.myBtn.icon-add::before {
+    background-image: url('/src/styles/icons/user-plus.svg');
+}
+
+.myBtn.icon-delete::before {
+    background-image: url('/src/styles/icons/user-minus.svg');
+}
+
+.myBtn.icon-search::before {
+    background-image: url('/src/styles/icons/search.svg');
+}
+
+.myBtn.icon-user::before {
+    background-image: url('/src/styles/icons/user.svg');
+}

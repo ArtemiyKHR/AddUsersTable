@@ -33,6 +33,7 @@ function App() {
     const toggleFormVisibility = () => {
         setIsFormVisible(!isFormVisible);
     }
+
     return (
         <div className="App">
             <span className="subTitle">Добавление и изменение <br/> пользователей</span>
@@ -44,7 +45,7 @@ function App() {
                     <MyButton iconClass="icon-add" onClick={toggleFormVisibility}>Добавить</MyButton>
                 </div>
             </header>
-            {/*<List users={users}/>*/}
+            
             <div className={`form ${isFormVisible ? "visible" : ""}`}>
                 <span className="form__title">Добавление пользователя</span>
                 <Form/>
